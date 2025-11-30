@@ -91,6 +91,7 @@ export class CommentController {
     status: HttpStatus.NOT_FOUND,
     description: 'комментарий не найден',
   })
+  @Authorization()
   @Delete(':id')
   async delete(@Param('id') id: string) {
     return this.commentService.delete(+id);
