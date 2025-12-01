@@ -19,7 +19,7 @@ export class CardEntity {
   @Column()
   title: string;
 
-  @Column({ nullable: true })
+  @Column({type:'text', nullable: true })
   description: string;
 
   @Column({ name: 'is_done', default: false })
